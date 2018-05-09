@@ -3,8 +3,8 @@ coverage
 node_modules
 
 npm-debug.log
-ravencore-message.js
-ravencore-message.min.js
+cryptorescuecore-message.js
+cryptorescuecore-message.min.js
 tests.js
 
 report

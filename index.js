@@ -1,4 +1,4 @@
-var ravencore = require('ravencore-lib');
-ravencore.Message = require('./lib/message');
+var cryptorescuecore = require('cryptorescuecore-lib');
+cryptorescuecore.Message = require('./lib/message');
 
-module.exports = ravencore.Message;
+module.exports = cryptorescuecore.Message;

@@ -1,7 +1,7 @@
 # Message Verification and Signing
-Ravencore implementation of [bitcoin message signing and verification](http://bitcoin.stackexchange.com/questions/3337/what-are-the-safety-guidelines-for-using-the-sign-message-feature/3339#3339). This is used to cryptographically prove that a certain message was signed by the holder of an address private key.
+CryptoRescueCore implementation of [bitcoin message signing and verification](http://bitcoin.stackexchange.com/questions/3337/what-are-the-safety-guidelines-for-using-the-sign-message-feature/3339#3339). This is used to cryptographically prove that a certain message was signed by the holder of an address private key.
 
-For more information refer to the [ravencore-message](https://github.com/underdarkskies/ravencore-message) github repo.
+For more information refer to the [cryptorescuecore-message](https://github.com/cryptorescue-project/cryptorescuecore-message) github repo.
 
 ## Installation
 Message Verification and Signing is implemented as a separate module and you must add it to your dependencies:
@@ -9,27 +9,27 @@ Message Verification and Signing is implemented as a separate module and you mus
 For node projects:
 
 ```bash
-npm install ravencore-message --save
+npm install cryptorescuecore-message --save
 ```
 
 For client-side projects:
 
 ```bash
-bower install ravencore-message --save
+bower install cryptorescuecore-message --save
 ```
 
 ## Example
 To sign a message:
 
 ```javascript
-var privateKey = PrivateKey.fromWIF('5K2DxqJ9kLFL3hF3KEWDftAig3TyAXenDxpr27PaLBieuSFo5PQ');
+var privateKey = PrivateKey.fromWIF('5Jq8CqypGBFULBZy1YhjuMdeLat2HXRPjCKdLvdnAJ65SbrFsBM');
 var signature = Message('hello, world').sign(privateKey);
 ```
 
 To verify a message:
 
 ```javascript
-var address = 'RGRsG7UQc3AmvdrhPDngpPjvTNhJQFeHYj';
+var address = 'CYWfkpw6GJEuBDHUMKGmDBkaTUTXpQTwRU';
 var signature = 'G5cFMHRysjcxkBJ7mol8l3cjPbFQFQ68fNqTGehTO9/cLNUaflt3gQT//yAUp5fqWF0snDlZYkXJoooazBicRTg=';
 var verified = Message('hello, world').verify(address, signature);
 ```

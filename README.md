@@ -1,29 +1,29 @@
-# Ravencoin Message Verification and Signing for Ravencore
+# CryptoRescue Message Verification and Signing for CryptoRescueCore
 
 
 
 
-ravencore-message adds support for verifying and signing ravencoin messages in [Node.js](http://nodejs.org/) and web browsers.
+cryptorescuecore-message adds support for verifying and signing cryptorescue messages in [Node.js](http://nodejs.org/) and web browsers.
 
-See [the main ravencore repo](https://github.com/underdarkskies/ravencore) for more information.
+See [the main cryptorescuecore repo](https://github.com/cryptorescue-project/cryptorescuecore) for more information.
 
 ## Getting Started
 
 ```sh
-npm install ravencore-message
+npm install cryptorescuecore-message
 ```
 
 ```sh
-bower install ravencore-message
+bower install cryptorescuecore-message
 ```
 
 To sign a message:
 
 ```javascript
-var ravencore = require('ravencore-lib');
-var Message = require('ravencore-message');
+var cryptorescuecore = require('cryptorescuecore-lib');
+var Message = require('cryptorescuecore-message');
 
-var privateKey = ravencore.PrivateKey.fromWIF('5K2DxqJ9kLFL3hF3KEWDftAig3TyAXenDxpr27PaLBieuSFo5PQ');
+var privateKey = cryptorescuecore.PrivateKey.fromWIF('5K2DxqJ9kLFL3hF3KEWDftAig3TyAXenDxpr27PaLBieuSFo5PQ');
 var signature = Message('hello, world').sign(privateKey);
 ```
 
@@ -37,10 +37,10 @@ var verified = Message('hello, world').verify(address, signature);
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/underdarkskies/ravencore/blob/master/CONTRIBUTING.md) on the main ravencore repo for information about how to contribute.
+See [CONTRIBUTING.md](https://github.com/cryptorescue-project/cryptorescuecore/blob/master/CONTRIBUTING.md) on the main cryptorescuecore repo for information about how to contribute.
 
 ## License
 
-Code released under [the MIT license](https://github.com/underdarkskies/ravencore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/cryptorescue-project/cryptorescuecore/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.

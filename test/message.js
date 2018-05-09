@@ -4,16 +4,16 @@ var chai = require('chai');
 var expect = chai.expect;
 var should = chai.should();
 
-var ravencore = require('ravencore-lib');
-var Address = ravencore.Address;
-var Signature = ravencore.crypto.Signature;
+var cryptorescuecore = require('cryptorescuecore-lib');
+var Address = cryptorescuecore.Address;
+var Signature = cryptorescuecore.crypto.Signature;
 var Message = require('../');
 
 describe('Message', function() {
 
-  var address = 'RGRsG7UQc3AmvdrhPDngpPjvTNhJQFeHYj';
+  var address = 'CYWfkpw6GJEuBDHUMKGmDBkaTUTXpQTwRU';
   var badAddress = 'mmRcrB5fTwgxaFJmVLNtaG8SV454y1E3kC';
-  var privateKey = ravencore.PrivateKey.fromWIF('5K2DxqJ9kLFL3hF3KEWDftAig3TyAXenDxpr27PaLBieuSFo5PQ');
+  var privateKey = cryptorescuecore.PrivateKey.fromWIF('5Jq8CqypGBFULBZy1YhjuMdeLat2HXRPjCKdLvdnAJ65SbrFsBM');
   var text = 'hello, world';
   var signatureString = 'G5cFMHRysjcxkBJ7mol8l3cjPbFQFQ68fNqTGehTO9/cLNUaflt3gQT//yAUp5fqWF0snDlZYkXJoooazBicRTg=';
 
@@ -101,7 +101,7 @@ describe('Message', function() {
   });
 
   it('will verify with an uncompressed pubkey', function() {
-    var privateKey = new ravencore.PrivateKey('5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss');
+    var privateKey = new cryptorescuecore.PrivateKey('5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss');
     var message = new Message('This is an example of a signed message.');
     var signature = message.sign(privateKey);
     var verified = message.verify(privateKey.toAddress(), signature);
